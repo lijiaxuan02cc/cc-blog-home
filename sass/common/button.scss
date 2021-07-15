@@ -1,0 +1,22 @@
+/*
+ * @Author: C.C. 
+ * @Date: 2021-07-13 17:35:49 
+ * @Last Modified by:   C.C. 
+ * @Last Modified time: 2021-07-13 17:35:49 
+ */
+@import './text';
+@import './shadow';
+.btn-primary {
+    @extend .text-primary;
+    @extend .shadow-soft;
+    display: inline-block;
+    position: relative;
+    padding: 9px 15px;
+    border-radius: 9px;
+    transition: all 0.2s ease;
+}
+
+.btn-primary:hover {
+    @extend .shadow-inset;
+    transform: scale(0.9);
+}

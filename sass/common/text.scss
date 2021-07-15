@@ -1,0 +1,19 @@
+/*
+ * @Author: C.C. 
+ * @Date: 2021-07-13 17:36:15 
+ * @Last Modified by: C.C.
+ * @Last Modified time: 2021-07-14 10:01:26
+ */
+
+@import './global';
+.text-primary {
+    font-family: 'Comic Sans MS', cursive;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 24px;
+    letter-spacing: 0.4px;
+    font-weight: 400;
+    font-size: 16px;
+    user-select: none;
+    color: $primaryTextColor;
+}

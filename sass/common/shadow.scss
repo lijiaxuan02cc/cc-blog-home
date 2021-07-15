@@ -1,0 +1,23 @@
+/*
+ * @Author: C.C. 
+ * @Date: 2021-07-13 17:36:11 
+ * @Last Modified by: C.C.
+ * @Last Modified time: 2021-07-15 14:03:33
+ */
+
+@import './global';
+.shadow-soft {
+    border: 1px solid #d1d9e6;
+    background-color: $backgroundColor;
+    box-shadow: 6px 6px 12px $darkColor, -6px -6px 12px $lightColor;
+}
+
+.shadow-inset {
+    background-color: $backgroundColor;
+    box-shadow: inset 6px 6px 12px $darkColor, inset -6px -6px 12px $lightColor;
+}
+
+.shadow-inset-shallow {
+    background-color: $backgroundColor;
+    box-shadow: inset 2px 2px 4px $darkColor, inset -2px -2px 4px $lightColor;
+}

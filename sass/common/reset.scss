@@ -1,0 +1,25 @@
+/*
+ * @Author: C.C. 
+ * @Date: 2021-07-13 17:36:01 
+ * @Last Modified by: C.C.
+ * @Last Modified time: 2021-07-15 10:51:03
+ */
+@import './global';
+body {
+    min-height: 100vh;
+    user-select: none;
+    cursor: pointer;
+    background-color: $backgroundColor;
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+input {
+    background: none;
+    outline: none;
+    border: none;
+}
