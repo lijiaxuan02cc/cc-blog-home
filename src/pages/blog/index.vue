@@ -9,7 +9,7 @@ import { defineComponent } from 'vue';
 import Container from './components/container.vue';
 
 export default defineComponent({
-    name: 'Blog',
+    name: 'PageBlog',
     components: {
         Container
     }

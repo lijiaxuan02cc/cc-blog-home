@@ -9,7 +9,11 @@ import { createRouter, createWebHashHistory } from 'vue-router';
 const routes = [
     {
         path: '/',
-        component: () => import('/@/pages/index/index.vue'),
+        component: () => import('/@/pages/index/index.vue')
+    },
+    {
+        path: '/content',
+        component: () => import('/@/pages/content/index.vue'),
         redirect: () => {
             return { path: '/home' };
         },

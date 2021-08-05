@@ -1,27 +1,31 @@
 <template>
-    <div class="page-project">
+    <div class="page-content">
         <container></container>
+        <slogan></slogan>
+        <router-view></router-view>
     </div>
 </template>
 
 <script lang="ts">
 import { defineComponent } from 'vue';
-import Container from './components/ProjectContainer.vue';
+import Container from './components/ContentContainer.vue';
+import Slogan from './components/ContentSlogan.vue';
 
 export default defineComponent({
-    name: 'Project',
+    name: 'PageContent',
     components: {
-        Container
+        Container,
+        Slogan
     }
 });
 </script>
 
 <style lang="scss" scoped>
-.page-project {
+.page-content {
     display: flex;
     align-items: center;
     flex-direction: column;
+    min-height: 100vh;
     min-width: 100vw;
-    min-height: 1200px;
 }
 </style>

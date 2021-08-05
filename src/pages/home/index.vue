@@ -8,7 +8,7 @@
 import { defineComponent } from 'vue';
 import DataOverview from '/@/components/data-overview/index.vue';
 export default defineComponent({
-    name: 'Home',
+    name: 'PageHome',
     components: {
         DataOverview
     },

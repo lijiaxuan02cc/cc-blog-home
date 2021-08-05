@@ -10,8 +10,8 @@
 
 <script lang="ts">
 import { defineComponent } from 'vue';
-import BlogContent from './blog-content.vue';
-import BlogNav from './blog-nav.vue';
+import BlogContent from './BlogContent.vue';
+import BlogNav from './BlogNav.vue';
 
 export default defineComponent({
     name: 'BlogContainer',

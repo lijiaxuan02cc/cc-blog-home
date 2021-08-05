@@ -1,5 +1,5 @@
 <template>
-    <div class="index-slogan">
+    <div class="content-slogan">
         <div class="slogan shadow-soft text-primary">
             <div class="pens-icon pens-icon-right"></div>
             {{ des }}
@@ -11,7 +11,7 @@
 <script lang="ts">
 import { defineComponent } from 'vue';
 export default defineComponent({
-    name: 'IndexSlogan',
+    name: 'ContentSlogan',
     props: {
         des: {
             type: String,
@@ -22,7 +22,7 @@ export default defineComponent({
 </script>
 
 <style lang="scss" scoped>
-.index-slogan {
+.content-slogan {
     display: flex;
     justify-content: center;
     margin: 50px 0px 0px 0px;

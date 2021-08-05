@@ -20,8 +20,3 @@ export interface callMeListType {
     iconUrl: string;
     jumpUrl: string;
 }
-
-// export interface callMeListType {
-//     tabList: Array<tabListItemType>;
-//     coverImg: string;
-// }

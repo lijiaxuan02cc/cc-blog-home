@@ -1,5 +1,5 @@
 <template>
-    <div class="home-center shadow-inset">
+    <div class="content-container shadow-inset">
         <div class="center-img" :style="{ backgroundImage: 'url(' + config.coverImg + ')' }"></div>
         <div class="center-tab-container">
             <div
@@ -19,14 +19,14 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, reactive } from 'vue';
+import { defineComponent, onMounted, reactive } from 'vue';
 import { useRouter } from 'vue-router';
 import { indexConfig } from '../../../config/page-index';
 import Avter from '/@/components/avter/index.vue';
 import CallMe from '/@/components/call-me/index.vue';
 
 export default defineComponent({
-    name: 'IndexContainer',
+    name: 'ContentContainer',
     components: {
         Avter,
         CallMe
@@ -35,12 +35,6 @@ export default defineComponent({
         const $router = useRouter();
         const config = reactive(indexConfig);
 
-        config.tabList.forEach((el) => {
-            if (window.location.href.includes(el.name.toLowerCase())) {
-                el.seleted = true;
-            }
-        });
-
         const changePage: (index: number) => void = function (index: number): void {
             config.tabList.forEach((el) => {
                 el.seleted = false;
@@ -48,6 +42,15 @@ export default defineComponent({
             config.tabList[index].seleted = true;
             $router.push(config.tabList[index].path);
         };
+
+        onMounted(() => {
+            config.tabList.forEach((el) => {
+                el.seleted = false;
+                if (window.location.href.includes(el.name.toLowerCase())) {
+                    el.seleted = true;
+                }
+            });
+        });
 
         return {
             config,
@@ -58,7 +61,7 @@ export default defineComponent({
 </script>
 
 <style lang="scss" scoped>
-.home-center {
+.content-container {
     position: relative;
     width: 1254px;
     height: 568px;
