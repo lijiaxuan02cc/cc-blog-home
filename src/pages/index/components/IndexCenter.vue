@@ -2,7 +2,7 @@
     <div class="index-center">
         <div class="center-content">
             <div class="center-slogan"></div>
-            <div class="center-button" @click="enterBlog">CLICK TO ENTER THE BLOG</div>
+            <div class="center-button" @click="openUpperLayer">CLICK TO ENTER THE ARTICLE</div>
         </div>
     </div>
 </template>
@@ -13,13 +13,14 @@ import { useRouter } from 'vue-router';
 
 export default defineComponent({
     name: 'IndexCenter',
-    setup() {
+    setup(props, { emit }) {
         const $router = useRouter();
-        const enterBlog = function () {
-            $router.push('/home');
+        const openUpperLayer = function () {
+            $router.push('/article');
+            emit('openUpperLayer');
         };
         return {
-            enterBlog
+            openUpperLayer
         };
     }
 });

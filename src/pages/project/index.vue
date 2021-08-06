@@ -9,7 +9,7 @@ import { defineComponent } from 'vue';
 import Container from './components/ProjectContainer.vue';
 
 export default defineComponent({
-    name: 'Project',
+    name: 'PageProject',
     components: {
         Container
     }
@@ -19,9 +19,7 @@ export default defineComponent({
 <style lang="scss" scoped>
 .page-project {
     display: flex;
-    align-items: center;
-    flex-direction: column;
+    justify-content: center;
     min-width: 100vw;
-    min-height: 1200px;
 }
 </style>

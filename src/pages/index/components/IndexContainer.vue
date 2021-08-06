@@ -1,10 +1,10 @@
 <template>
-    <div class="index-container">
+    <div class="index-container" :class="{ 'open-upper-layer': borderStyle === 'solid' }">
         <Header :borderStyle="borderStyle" @openUpperLayer="openUpperLayer" />
         <template v-if="borderStyle === 'none'">
-            <Center />
+            <Center @openUpperLayer="openUpperLayer" />
         </template>
-        <UpperLayer v-else />
+        <UpperLayer v-else @hideUpperLayer="hideUpperLayer" />
     </div>
 </template>
 
@@ -26,9 +26,14 @@ export default defineComponent({
         const openUpperLayer = function () {
             borderStyle.value = 'solid';
         };
+
+        const hideUpperLayer = function () {
+            borderStyle.value = 'none';
+        };
         return {
             borderStyle,
-            openUpperLayer
+            openUpperLayer,
+            hideUpperLayer
         };
     }
 });
@@ -38,5 +43,8 @@ export default defineComponent({
 .index-container {
     width: 100%;
     height: 100%;
+}
+.open-upper-layer {
+    background-color: #121212;
 }
 </style>

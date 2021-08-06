@@ -4,15 +4,15 @@
             <div class="index-icon know-me"></div>
             <span>KNWO ME ？</span>
         </div>
-        <div class="herder-action cursor-hand">
+        <div class="herder-action cursor-hand" @click="headerClick">
             <span>SHARE ;)</span>
-            <div class="index-icon share" @click="headerClick"></div>
+            <div class="index-icon share"></div>
         </div>
     </div>
 </template>
 
 <script lang="ts">
-import { defineComponent, ref } from 'vue';
+import { defineComponent } from 'vue';
 
 export default defineComponent({
     name: 'IndexHeader',

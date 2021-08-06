@@ -1,12 +1,12 @@
 <template>
     <div class="page-blog">
-        <container> </container>
+        <container></container>
     </div>
 </template>
 
 <script lang="ts">
 import { defineComponent } from 'vue';
-import Container from './components/container.vue';
+import Container from './components/BlogContainer.vue';
 
 export default defineComponent({
     name: 'PageBlog',

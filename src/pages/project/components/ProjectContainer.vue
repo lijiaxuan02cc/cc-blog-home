@@ -26,7 +26,8 @@ export default defineComponent({
 .project-container {
     position: relative;
     width: 1254px;
-    margin-top: 150px;
+    margin-top: 50px;
+    padding-bottom: 100px;
     .project-title {
         font-size: 28px;
         font-weight: 800;

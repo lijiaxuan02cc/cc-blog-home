@@ -27,7 +27,7 @@ export default defineComponent({
     position: relative;
     width: 1254px;
     min-height: 800px;
-    margin-top: 150px;
+    margin-top: 50px;
     .blog-title {
         font-size: 28px;
         font-weight: 800;

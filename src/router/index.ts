@@ -9,26 +9,15 @@ import { createRouter, createWebHashHistory } from 'vue-router';
 const routes = [
     {
         path: '/',
-        component: () => import('/@/pages/index/index.vue')
-    },
-    {
-        path: '/content',
-        component: () => import('/@/pages/content/index.vue'),
-        redirect: () => {
-            return { path: '/home' };
-        },
+        component: () => import('/@/pages/index/index.vue'),
         children: [
             {
                 path: '/home',
                 component: () => import('/@/pages/home/index.vue')
             },
             {
-                path: '/blog',
-                component: () => import('/@/pages/blog/index.vue')
-            },
-            {
-                path: '/project',
-                component: () => import('/@/pages/project/index.vue')
+                path: '/article',
+                component: () => import('/@/pages/article/index.vue')
             }
         ]
     }

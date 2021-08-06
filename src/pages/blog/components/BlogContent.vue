@@ -27,7 +27,7 @@ export default defineComponent({
     position: relative;
     width: 60%;
     min-height: 800px;
-    padding: 30px 0px;
+    padding: 30px 0px 150px;
     .blog-card {
         margin-bottom: 30px;
     }
