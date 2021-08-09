@@ -3,7 +3,7 @@
         <div class="layer-content">
             <router-view></router-view>
         </div>
-        <div class="footer-button" @click="footerButtonClick">
+        <div class="footer-button cursor-hand" @click="footerButtonClick">
             <div>GO BACK</div>
         </div>
     </div>
@@ -45,7 +45,6 @@ export default defineComponent({
         overflow: hidden;
         font-size: 30px;
         font-weight: 600;
-        cursor: url('https://cc-space.oss-cn-beijing.aliyuncs.com/cursor-hand.png') 8 0, auto;
     }
 }
 </style>

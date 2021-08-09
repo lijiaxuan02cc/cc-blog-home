@@ -1,10 +1,10 @@
 <template>
     <div class="index-header">
-        <div class="herder-action cursor-hand" @click="headerClick">
+        <div class="herder-action cursor-hand" @click="headerClick('cc')">
             <div class="index-icon know-me"></div>
             <span>KNWO ME ？</span>
         </div>
-        <div class="herder-action cursor-hand" @click="headerClick">
+        <div class="herder-action cursor-hand" @click="headerClick('share')">
             <span>SHARE ;)</span>
             <div class="index-icon share"></div>
         </div>
@@ -13,6 +13,7 @@
 
 <script lang="ts">
 import { defineComponent } from 'vue';
+import { useRouter } from 'vue-router';
 
 export default defineComponent({
     name: 'IndexHeader',
@@ -23,7 +24,9 @@ export default defineComponent({
         }
     },
     setup(props, { emit }) {
-        const headerClick = function () {
+        const $router = useRouter();
+        const headerClick = function (path: string) {
+            $router.push(`/${path}`);
             emit('openUpperLayer');
         };
         return {
@@ -34,9 +37,6 @@ export default defineComponent({
 </script>
 
 <style lang="scss" scoped>
-.cursor-hand {
-    cursor: url('https://cc-space.oss-cn-beijing.aliyuncs.com/cursor-hand.png') 8 0, auto;
-}
 .index-header {
     display: flex;
     justify-content: space-between;

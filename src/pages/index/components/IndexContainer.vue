@@ -10,6 +10,7 @@
 
 <script lang="ts">
 import { defineComponent, ref } from 'vue';
+import { useRouter } from 'vue-router';
 import Header from './IndexHeader.vue';
 import Center from './IndexCenter.vue';
 import UpperLayer from './IndexUpperLayer.vue';
@@ -22,6 +23,7 @@ export default defineComponent({
         UpperLayer
     },
     setup() {
+        const $router = useRouter();
         const borderStyle = ref('none');
         const openUpperLayer = function () {
             borderStyle.value = 'solid';
@@ -29,6 +31,7 @@ export default defineComponent({
 
         const hideUpperLayer = function () {
             borderStyle.value = 'none';
+            $router.push('/');
         };
         return {
             borderStyle,
@@ -45,6 +48,6 @@ export default defineComponent({
     height: 100%;
 }
 .open-upper-layer {
-    background-color: #121212;
+    background-color: #000;
 }
 </style>

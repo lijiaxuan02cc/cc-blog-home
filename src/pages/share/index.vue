@@ -1,15 +1,15 @@
 <template>
-    <div class="page-project">
-        <container></container>
+    <div class="page-share">
+        <Container />
     </div>
 </template>
 
 <script lang="ts">
 import { defineComponent } from 'vue';
-import Container from './components/ProjectContainer.vue';
+import Container from './components/ShareContainer.vue';
 
 export default defineComponent({
-    name: 'PageProject',
+    name: 'PageShare',
     components: {
         Container
     }
@@ -17,8 +17,10 @@ export default defineComponent({
 </script>
 
 <style lang="scss" scoped>
-.page-project {
+.page-share {
     display: flex;
+    align-items: center;
     justify-content: center;
+    height: 100%;
 }
 </style>

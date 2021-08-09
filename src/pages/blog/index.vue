@@ -21,6 +21,5 @@ export default defineComponent({
     display: flex;
     align-items: center;
     flex-direction: column;
-    min-width: 100vw;
 }
 </style>

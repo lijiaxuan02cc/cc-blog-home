@@ -18,6 +18,10 @@ const routes = [
             {
                 path: '/article',
                 component: () => import('/@/pages/article/index.vue')
+            },
+            {
+                path: '/share',
+                component: () => import('/@/pages/share/index.vue')
             }
         ]
     }

@@ -2,7 +2,7 @@
     <div class="index-center">
         <div class="center-content">
             <div class="center-slogan"></div>
-            <div class="center-button" @click="openUpperLayer">CLICK TO ENTER THE ARTICLE</div>
+            <div class="center-button cursor-hand" @click="openUpperLayer">CLICK TO ENTER THE ARTICLE</div>
         </div>
     </div>
 </template>
@@ -75,7 +75,6 @@ export default defineComponent({
         font-weight: 600;
         text-align: center;
         color: #34ff67;
-        cursor: url('https://cc-space.oss-cn-beijing.aliyuncs.com/cursor-hand.png') 8 0, auto;
         animation: buttonAnimate ease-in 1.5s infinite;
     }
 }
