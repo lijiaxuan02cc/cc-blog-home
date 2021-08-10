@@ -22,6 +22,10 @@ const routes = [
             {
                 path: '/share',
                 component: () => import('/@/pages/share/index.vue')
+            },
+            {
+                path: '/cc',
+                component: () => import('/@/pages/me/index.vue')
             }
         ]
     }
